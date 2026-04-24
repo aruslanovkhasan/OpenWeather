@@ -5,5 +5,5 @@ export default async function handler(req, res) {
         `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${state.apiKey}`
     )
     const data = await response.json()
-    req.json(data)
+    res.json(data)
 }
